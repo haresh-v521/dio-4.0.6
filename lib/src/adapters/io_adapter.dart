@@ -167,7 +167,7 @@ class DefaultHttpClientAdapter implements HttpClientAdapter {
     }
     if (_defaultHttpClient == null) {
       _defaultHttpClient = HttpClient();
-      _defaultHttpClient!.idleTimeout = Duration(seconds: 3);
+      _defaultHttpClient!.idleTimeout = Duration(seconds: 15);
       if (onHttpClientCreate != null) {
         //user can return a HttpClient instance
         _defaultHttpClient =
